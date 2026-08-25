@@ -1,0 +1,31 @@
+fastapi
+uvicorn
+python-multipart
+
+# Resume text extraction
+PyMuPDF
+python-docx
+
+# NLP
+spacy
+sentence-transformers
+
+# Machine Learning
+scikit-learn
+numpy
+pandas
+xgboost
+
+# Deep Learning
+torch
+transformers
+
+# Database
+sqlalchemy
+pymysql
+
+# Environment variables
+python-dotenv
+
+# Data validation
+pydantic
