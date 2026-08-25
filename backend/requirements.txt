@@ -17,7 +17,7 @@ pandas
 xgboost
 
 # Deep Learning
-torch
+
 transformers
 
 # Database
