@@ -1,5 +1,4 @@
-const API_URL = "http://127.0.0.1:8000";
-
+const API_URL = "https://resumeiq-backend-lv1q.onrender.com";
 export async function analyzeResume(file) {
   // --------------------------------------------------
   // 1. Analyze resume
