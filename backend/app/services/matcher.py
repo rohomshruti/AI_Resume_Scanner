@@ -1,6 +1,3 @@
-from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity
-
 model = None
 
 
@@ -8,12 +5,16 @@ def get_model():
     global model
 
     if model is None:
+        from sentence_transformers import SentenceTransformer
+
         model = SentenceTransformer("all-MiniLM-L6-v2")
 
     return model
 
 
 def calculate_match_score(resume_text: str, job_description: str) -> float:
+
+    from sklearn.metrics.pairwise import cosine_similarity
 
     model = get_model()
 
