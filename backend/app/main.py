@@ -14,15 +14,13 @@ app = FastAPI(
 
 
 # CORS configuration
-# Allows the local React frontend during development.
-# We will add the deployed frontend URL after deploying to Vercel.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-    "http://localhost:8080",
-    "http://localhost:5173",
-    "https://resumeiq-3r15ri4n5-rohomshruti-5504s-projects.vercel.app",
-    ]
+        "http://localhost:8080",
+        "http://localhost:5173",
+        "https://resumeiq-3r15ri4n5-rohomshruti-5504s-projects.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
