@@ -1,3 +1,4 @@
+```python
 import os
 import shutil
 
@@ -5,7 +6,6 @@ from fastapi import APIRouter, File, UploadFile, HTTPException
 
 from app.models.job import Job
 from app.services.parser import extract_resume_text
-from app.services.matcher import calculate_match_score
 from app.services.skill_extractor import extract_skills
 
 
@@ -188,6 +188,10 @@ async def match_resume_to_job(
         # --------------------------------------------------
         # Calculate Semantic Match Score
         # --------------------------------------------------
+        # Import the heavy ML module only when job matching
+        # is actually requested.
+
+        from app.services.matcher import calculate_match_score
 
         match_score = calculate_match_score(
             resume_text,
@@ -251,3 +255,4 @@ async def match_resume_to_job(
         # Remove temporary uploaded file
         if os.path.exists(file_path):
             os.remove(file_path)
+```
